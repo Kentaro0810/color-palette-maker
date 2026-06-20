@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>カラーパレット作成ツール</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="badge">Color Palette Maker</p>
+      <h1>カラーパレット作成ツール</h1>
+      <p class="description">
+        ランダムに色を生成して、気に入った配色を保存できます。
+      </p>
+    </section>
 
+    <section class="control-card">
+      <div class="buttons">
+        <button id="generateButton" class="main-button" type="button">
+          ランダム生成
+        </button>
+        <button id="copyCssButton" class="sub-button" type="button">
+          CSSをコピー
+        </button>
+        <button id="savePaletteButton" class="sub-button" type="button">
+          お気に入り保存
+        </button>
+      </div>
+
+      <p id="message" class="message"></p>
+    </section>
+
+    <section id="palette" class="palette"></section>
+
+    <section class="css-card">
+      <h2>CSS変数プレビュー</h2>
+      <pre id="cssOutput"></pre>
+    </section>
+
+    <section class="favorites-card">
+      <div class="section-title">
+        <h2>お気に入りパレット</h2>
+        <button id="clearFavoritesButton" class="danger-button" type="button">
+          全削除
+        </button>
+      </div>
+
+      <div id="favoritesList" class="favorites-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
